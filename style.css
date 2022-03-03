@@ -1,0 +1,335 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  overflow: hidden;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  background: rgb(252 252 252);
+  box-shadow: 0px 0px 5px #888;
+  top: 0;
+}
+.container-nav {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.item-nav-01 a {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.item-nav-01 a:hover {
+  color: #238636;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a:hover {
+  color: #238636;
+}
+
+.nav-list li a {
+  border-bottom: 3px solid transparent;
+  padding-bottom: 10px;
+  transition: 0.3s ease-in;
+}
+
+.nav-list li a:hover {
+  border-bottom: 4px solid #238636;
+  padding-bottom: 10px;
+}
+
+.btn-menu {
+  display: none;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.nav-img-perfil img {
+  width: 400px;
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .nav-list {
+    display: none;
+    position: relative;
+    top: 85px;
+    right: 0;
+    text-align: center;
+    background: #999;
+    padding: 20px;
+    animation: show 0.4s forwards;
+  }
+
+  .nav-list.ativo {
+    display: flex;
+    top: 55px;
+    right: -83px;
+    border-radius: 30px;
+  }
+  .nav-list li {
+    margin-bottom: 30px;
+  }
+  .btn-menu {
+    display: block;
+  }
+  .nav-img-perfil img {
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.container-home {
+  display: flex;
+  width: 1300px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin-top: 320px;
+  margin-bottom: 90px;
+}
+
+.container-home-list {
+  display: flex;
+  gap: 30px;
+}
+
+.container-home-text h1 {
+  position: relative;
+  font-size: 4rem;
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+.container-home-text p {
+  margin-bottom: 80px;
+  position: relative;
+  color: #666;
+}
+
+.style-p::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #238636;
+  border-radius: 50%;
+  top: 5px;
+  margin-left: 5px;
+}
+
+.container-home-text h1::before {
+  content: url(./img/icons/detalhe\ 1.svg);
+  position: absolute;
+  z-index: -1;
+  margin-top: -29px;
+  margin-left: -45px;
+}
+
+.container-home-text h1::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.github a svg,
+.linkdir a svg,
+.instagram a svg {
+  transition: 0.2s ease-in;
+}
+
+.github a svg:hover {
+  fill: #238636;
+}
+
+.linkdir a svg:hover {
+  fill: #0a66c2;
+}
+
+.instagram a svg:hover {
+  fill: #d92d7a;
+}
+
+.sobre-min {
+  width: 1000px;
+  margin-bottom: 250px;
+}
+@media (max-width: 1300px) {
+  .container-home {
+    display: grid;
+    width: 410px;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .container-home-text h1 {
+    font-size: 2rem;
+    width: 400px;
+  }
+
+  .container-home-text p {
+    margin-bottom: 30px;
+  }
+
+  .container-home-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .conhecimento-01,
+  .conhecimento-02 {
+    padding: 30px;
+  }
+  .container-home-text h1::before {
+    content: url(./img/icons/detalhe\ 2.svg);
+    position: absolute;
+    z-index: -1;
+    margin-top: -12px;
+    margin-left: -20px;
+  }
+
+  .sobre-min {
+    width: 400px;
+    border-bottom: 2px solid #777;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.container-conhecimento {
+  width: 1400px;
+  margin: auto;
+}
+
+.conhecimento-01 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.conhecimento-img img {
+  width: 400px;
+}
+
+.conhecimento-text p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.conhecimento-02 {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 70px;
+}
+
+.conhecimento-02 > div {
+  text-align: center;
+}
+
+.conhecimento-02 > div p {
+  font-size: 2rem;
+}
+
+.conhecimento-02 > div img {
+  width: 250px;
+}
+
+@media (max-width: 1300px) {
+  .conhecimento-img img {
+    width: 300px;
+  }
+
+  .conhecimento-01,
+  .conhecimento-02 {
+    display: grid;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .conhecimento-02 {
+    justify-content: center;
+    display: flex;
+    margin-top: -70px;
+  }
+  .conhecimento-02 > div img {
+    width: 80px;
+  }
+  .conhecimento-02 > div p {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .conhecimento-text p {
+    font-size: 1rem;
+  }
+  .container-conhecimento {
+    width: 400px;
+  }
+}
+
+@keyframes loop-top {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.conhecimento-01,
+.conhecimento-02 {
+  visibility: hidden;
+}
